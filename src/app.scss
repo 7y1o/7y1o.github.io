@@ -1,5 +1,34 @@
 
+@font-face {
+  font-family: 'Golos';
+  font-weight: 800;
+  src: url(/fonts/Golos-Text_Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Golos';
+  font-weight: 500;
+  src: url(/fonts/Golos-Text_Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Golos';
+  font-weight: 400;
+  src: url(/fonts/Golos-Text_Regular.ttf);
+}
+
+* {
+  user-select: none;
+  outline: none;
+  outline: 0;
+}
+
 // Common data block holder
 #main {
-
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
