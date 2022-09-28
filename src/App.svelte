@@ -18,7 +18,7 @@
       justify-content: center
 
       h1
-        font: 800 2rem 'Golos'
+        font: 800 1.5rem 'Golos'
         padding: 0
         margin: 0
         color: black
