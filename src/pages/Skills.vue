@@ -1,5 +1,6 @@
 <template>
-  Skills tree
+  Skills tree<br/>
+  <router-link to="/">Home</router-link>
 </template>
 
 <!--Style & script-->

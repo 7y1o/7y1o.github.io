@@ -1,5 +1,6 @@
 <template>
-  Projects
+  Projects<br/>
+  <router-link to="/">Home</router-link>
 </template>
 
 <!--Style & script-->
