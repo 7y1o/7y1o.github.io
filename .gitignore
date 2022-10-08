@@ -1,24 +1,21 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+/*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Exclude dirs
+!/.github
+!/src
+!/static
+!/tests
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Exclude files
+!/.eslintignore
+!/.eslintrc.cjs
+!/.gitignore
+!/.npmrc
+!/.prettierignore
+!/.prettierrc
+!/package.json
+!/playwright.config.ts
+!/README.md
+!/svelte.config.js
+!/tsconfig.json
+!/vite.config.ts
