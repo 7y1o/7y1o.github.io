@@ -1,9 +1,0 @@
-name: Checkout repository
-on: [workflow_call]
-
-jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
