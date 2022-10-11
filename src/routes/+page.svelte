@@ -1,5 +1,6 @@
 <script lang="ts">
-    import {onMount} from "svelte";
+	  import anime from 'animejs';
+    import {onMount} from 'svelte';
     import {
         WebGLRenderer,
         Scene,
@@ -40,7 +41,41 @@
             renderer.render(scene, camera);
         });
 
+        mesh.scale.set(0, 0, 0);
+
         bg.appendChild(renderer.domElement);
+
+        anime({
+          targets: [mesh.scale],
+          x: 1,
+          y: 1,
+          z: 1,
+          duration: 3000,
+          easing: 'easeOutExpo'
+        })
+
+        anime({
+          duration: 1500,
+          easing: 'easeOutExpo',
+          targets: document.querySelector('h1')?.querySelectorAll('b'),
+          opacity: 1,
+          translateX: [64, 0],
+          delay: (_, i) => i * 100 + 800
+        })
+
+        anime({
+          targets: '.background',
+          opacity: [0, 1],
+          duration: 200
+        })
+
+        anime({
+          targets: document.querySelector('p')?.querySelectorAll('b'),
+          easing: 'easeOutExpo',
+          opacity: [0, 1],
+          marginLeft: [-4, 0],
+          delay: (_, i) => i * 50 + 1000,
+        })
     });
 </script>
 
@@ -48,8 +83,8 @@
 <main>
     <div class="background" bind:this={bg}></div>
     <div class="content">
-        <h1>7y1o</h1>
-        <p>This site is under construction</p>
+        <h1>{@html '7y1o'.split('').map(el => `<b style="opacity: 0;">${el}</b>`).join('')}</h1>
+        <p>{@html 'This site is under construction'.split('').map(el => `<b style="opacity: 0;">${el}</b>`).join('')}</p>
     </div>
 </main>
 
